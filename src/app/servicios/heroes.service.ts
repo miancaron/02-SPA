@@ -76,12 +76,13 @@ export class HeroesService {
         let nombre = heroe.nombre.toLocaleLowerCase();
 
         if ( nombre.indexOf( termino ) >= 0 ) {
+          // Añadir el heroe al array
           heroesArr.push(heroe);
         }
 
-        return heroesArr;
-
       }
+
+      return heroesArr;
 
     }
 }
