@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HeroesService, Heroe } from '../../servicios/heroes.service';
-import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-buscar-heroe',
@@ -18,13 +17,14 @@ export class BuscarHeroeComponent implements OnInit {
 
     this.activatedRoute.params.subscribe( params => {
       this.termino = params['termino'];
-      console.log(this.termino);
+      console.log('buscar-heroe -> constructor ' + this.termino);
     } );
 
    }
 
   ngOnInit(): void {
 
+    console.log('buscar-heroe -> ngOnInit');
     this.heroes = this._heroesService.buscarHeroes(this.termino);
     console.log(this.heroes);
 
