@@ -79,9 +79,9 @@ export class HeroesService {
           heroesArr.push(heroe);
         }
 
-        return heroesArr;
-
       }
+
+      return heroesArr;
 
     }
 }
